@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* universal selector */
+* {
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Smooth Scroll */
+html{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar  */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* Custom Scrollbar END */
+
+/* Styles for background */
+
+body::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(255, 255, 2, 0.32) 0%, rgba(255, 255, 2, 0.25) 100%);    /*forming a gradient color overlay screen with 180deg its gradient style and color tone is same 255 255 255 but opacity changes*/
+  -webkit-backdrop-filter: saturate(3);
+  backdrop-filter: saturate(3);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1611075384322-731537ad7971?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=795&q=80);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0.8em;
+  }
+}
+header{
+  background-color: rgb(55 55 55 / 35%);
+  /*display: flex;
+  flex-direction: column;
+  align-items: flex-start;*/
+  margin-top:0px;
+  max-width: 1250px;
+  width: 100%;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-weight: 500;
+  padding: 1rem 1rem 2rem 1rem;
+  
+}
+
+/* navbar styles */
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1.5px solid rgb(255 255 255 / 35%);
+}
+
+.navBar > .login_reg,h1,.navBar > navigationMenu{
+  margin: 10px;
+}
+
+.navBar > a{
+    text-decoration: none;
+    color:black;
+}
+.navigationMenu > a{
+  padding: 5px 15px;
+  margin-left: 10px; 
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.navigationMenu > a:hover{
+  transition: ease-in-out 300ms;
+  background: white;
+}
+.login_reg > a{
+  padding: 5px 10px;
+  margin-left: 10px; 
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.login_reg > a:hover{
+  transition: ease-in-out 300ms;
+  background: white;
+}
+
+main {
+  background-color: rgb(55 55 55 / 35%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1250px;
+  width: 100%;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-weight: 500;
+  padding: 1rem 1rem 2rem 1rem;
+  overflow: auto;
+}
+
+main::-webkit-scrollbar{
+  display: none;
+}
+.first{
+  display: flex;
+  align-items: center;
+  /*justify-content: space-around;*/
+  width: 100%;
+ 
+}
+.loginForm{
+  padding: 5px 10px;
+  margin-left: 10px; 
+  display: inline-block;
+  /*margin: 1rem;*/
+  width:  calc(40% - 5rem);
+  background-color: rgb(255 255 255 / 31%);
+  border: 1px solid rgb(255 255 255 / 31%);
+  border-radius: 5px;
+ /* padding: 1rem;*/
+}
+
+.loginForm > .formGroup{
+  margin-bottom: 0.8rem;
+}
+
+.formGroup > input{
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.formGroup > .captcha{
+  width: 50%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.submitButton{
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 15px;
+}
+.registerButton{
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 15px;
+}
+.vid{
+    margin-left: 200px;
+    width: 565px;
+    height: auto;
+
+    
+   
+}
+
+/* Hero section styles */
+.heroSection{
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profileImage{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.herosectionDetails{
+  text-align: center;
+}
+
+.herosectionDetails > h1{
+  font-size: 50px;
+  margin: 10px;
+}
+
+/* Hero section styles end */
+
+
+.keyFrame{
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 100px; background: blue;}
+  50%  {top: 100px; left: 100px; background: yellow;}
+  75%  {top: 100px; left: 0px; background: green;}
+  100% {top: 0px; left: 0px; background: red;}
+}
